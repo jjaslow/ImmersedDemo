@@ -338,3 +338,8 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Assets/Oculus
+/Assets/TutorialInfo
+/Assets/XR
+/Library
+/Temp
