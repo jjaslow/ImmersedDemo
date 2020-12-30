@@ -1,0 +1,29 @@
+{
+  "teachers": [
+    {
+      "professor": "Albus Dumbledore",
+      "subject": "Transfiguration",
+      "classCode": "TN101"
+    },
+    {
+      "professor": "Severus Snape",
+      "subject": "Defence Against the Dark Arts",
+      "classCode": "DA102"
+    },
+    {
+      "professor": "Remus Lupin",
+      "subject": "Defence Against the Dark Arts",
+      "classCode": "DA101"
+    },
+    {
+      "professor": "Horace Slughorn",
+      "subject": "Potions",
+      "classCode": "PT101"
+    },
+    {
+      "professor": "Quirinus Quirrell",
+      "subject": "Muggle Studies",
+      "classCode": "MG101"
+    }
+  ]
+}

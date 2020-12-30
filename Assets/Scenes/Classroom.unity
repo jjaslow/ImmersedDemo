@@ -330,10 +330,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StudentRig
       objectReference: {fileID: 0}
-    - target: {fileID: 4765122642332902299, guid: c714954270dbd3b4ba3bdf6a5ee28d02, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c714954270dbd3b4ba3bdf6a5ee28d02, type: 3}
 --- !u!1 &653260035
@@ -534,10 +530,6 @@ PrefabInstance:
     - target: {fileID: 4765122642332902295, guid: 13e5ae125b84d1f4e8c938d883892b44, type: 3}
       propertyPath: m_Name
       value: TeacherRig
-      objectReference: {fileID: 0}
-    - target: {fileID: 4765122642332902299, guid: 13e5ae125b84d1f4e8c938d883892b44, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13e5ae125b84d1f4e8c938d883892b44, type: 3}

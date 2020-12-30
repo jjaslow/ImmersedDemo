@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "name": "Harry Potter",
+      "id": "12345",
+      "gender": "male",
+      "colorHex": "0000FF",
+      "gradeAttending": "8",
+      "currentGPA": "3.2"
+    },
+    {
+      "name": "Hermione Granger",
+      "id": "12346",
+      "gender": "female",
+      "colorHex": "FF0000",
+      "gradeAttending": "8",
+      "currentGPA": "4.0"
+    },
+    {
+      "name": "Ron Weasley",
+      "id": "12347",
+      "gender": "male",
+      "colorHex": "00FF00",
+      "gradeAttending": "8",
+      "currentGPA": "2.6"
+    }
+  ]
+}

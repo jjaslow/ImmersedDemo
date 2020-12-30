@@ -3,55 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-public class Student : MonoBehaviour
+[System.Serializable]
+public class Student
 {
-    public enum Gender
+
+    public string name;
+    public int id;
+    public string gender;
+    public string colorHex;
+    public Color color;
+
+    public int gradeAttending;
+    public float currentGPA;
+
+    public void Initialize()
     {
-        Male = 0,
-        Female = 1,
-        Other = 3
+        Color newColor;
+        if (ColorUtility.TryParseHtmlString("#" + colorHex, out newColor))
+        {
+            color = newColor;
+        }
     }
+}
 
-    string studentName;
-    int studentIDNumber;
-    Gender studentGender;
-    Color avatarColor;
-
-    int gradeAttending;
-    float currentGPA;
-
-
-    #region Getters
-    public string GetStudentName()
-    {
-        return studentName;
-    }
-    public int GetStudentID()
-    {
-        return studentIDNumber;
-    }
-    public Gender GetStudentGender()
-    {
-        return studentGender;
-    }
-    public Color GetAvatarColor()
-    {
-        return avatarColor;
-    }
-    public int GetGradeAttending()
-    {
-        return gradeAttending;
-    }
-    public float GetStudentGPA()
-    {
-        return currentGPA;
-    }
-    #endregion
-
-
-
-
-
-
+[System.Serializable]
+public class StudentRoot
+{
+    public List<Student> students = new List<Student>();
 }
