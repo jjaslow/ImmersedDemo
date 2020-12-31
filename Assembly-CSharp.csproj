@@ -453,6 +453,9 @@
     <Compile Include="Assets\Photon\Simple\Core\GenericHitscan\HitscanComponent.cs" />
     <Compile Include="Assets\Photon\Simple\Components\SyncState\Enums\ObjState.cs" />
     <Compile Include="Assets\Photon\Simple\Utilities\GhostWorld\HauntedStatic.cs" />
+    <Compile Include="Assets\Scripts\NetworkManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerSetup.cs" />
+    <Compile Include="Assets\Scripts\ClassroomManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />

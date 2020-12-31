@@ -2,8 +2,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+using Photon.Pun;
+using System.Collections;
 
-public class CampusManager : MonoBehaviour
+public class CampusManager : MonoBehaviourPunCallbacks
 {
     public static CampusManager Instance { get; private set; }
 
@@ -21,24 +24,33 @@ public class CampusManager : MonoBehaviour
     }
 
 
-    [SerializeField]
-    TeacherRoot teacherList;
-    [SerializeField]
-    StudentRoot studentList;
+    public TeacherRoot teacherList;
+    public StudentRoot studentList;
     [SerializeField]
     List<Room> classRooms = new List<Room>();
 
-    [SerializeField] Dropdown teacherDropdown;
-    [SerializeField] Dropdown studentDropdown;
+    public bool isTeacher = false;
+    public int teacherNumber = -1;
+    public int studentNumber = -1;
+    public int classNumber = -1;
 
+    [Header("Dropdowns")]
+    [SerializeField] TMP_Dropdown teacherDropdown;
+    [SerializeField] TMP_Dropdown studentDropdown;
+    [SerializeField] TMP_Dropdown studentClassesDropdown;
+
+    [Header("Panels")]
     [SerializeField] GameObject mainPanel;
     [SerializeField] GameObject teacherPanel;
+    [SerializeField] GameObject studentPanel;
 
+    [SerializeField] TMP_Text debugText;
 
     private void Start()
     {
         mainPanel.SetActive(true);
         teacherPanel.SetActive(false);
+        studentPanel.SetActive(false);
 
         TextAsset jsonTeacher = Resources.Load<TextAsset>("teachers");     
         teacherList = JsonUtility.FromJson<TeacherRoot>(jsonTeacher.text);
@@ -52,6 +64,11 @@ public class CampusManager : MonoBehaviour
     }
 
 
+    void SwitchScene()
+    {
+        SceneManager.LoadScene("ClassRoom");
+    }
+
 
 
 
@@ -60,9 +77,10 @@ public class CampusManager : MonoBehaviour
     {
         mainPanel.SetActive(false);
         teacherPanel.SetActive(true);
+        studentPanel.SetActive(false);
 
         List<string> options = new List<string>();
-        foreach (Teacher teacher in teacherList.teachers)
+        foreach (var teacher in teacherList.teachers)
         {
             options.Add(teacher.classCode); // Or whatever you want for a label
         }
@@ -72,23 +90,49 @@ public class CampusManager : MonoBehaviour
 
     public void TeacherGotoClass()
     {
-        int teacherNumber = teacherDropdown.value;
+        isTeacher = true;
+
+        teacherNumber = teacherDropdown.value;
         Debug.Log(teacherList.teachers[teacherNumber].professor);
+        debugText.text += teacherList.teachers[teacherNumber].professor + "\n";
 
-        Room newRoom = new Room(teacherList.teachers[teacherNumber]);
-        classRooms.Add(newRoom);
+        new Room(teacherList.teachers[teacherNumber]);
 
-        //SceneManager.LoadScene("ClassRoom");
+        NetworkManager.Instance.CreateRoom();
     }
+
+
 
     public void StudentSelectClass()
     {
+        mainPanel.SetActive(false);
+        teacherPanel.SetActive(false);
+        studentPanel.SetActive(true);
 
+        List<string> options = new List<string>();
+        foreach (Student student in studentList.students)
+        {
+            options.Add(student.name); // Or whatever you want for a label
+        }
+        studentDropdown.ClearOptions();
+        studentDropdown.AddOptions(options);
+
+
+        List<string> options2 = new List<string>();
+        foreach (var teacher in teacherList.teachers)
+        {
+            options2.Add(teacher.classCode); // Or whatever you want for a label
+        }
+        studentClassesDropdown.ClearOptions();
+        studentClassesDropdown.AddOptions(options2);
     }
 
     public void StudentGotoClass()
     {
+        studentNumber = studentDropdown.value;
+        classNumber = studentClassesDropdown.value;
 
+        NetworkManager.Instance.JoinRoom();
     }
 
 
@@ -98,6 +142,38 @@ public class CampusManager : MonoBehaviour
 
 
 
+    #region PUN Callbacks
+
+
+    public override void OnCreatedRoom()
+    {
+        Debug.Log("CREATED room: " + PhotonNetwork.CurrentRoom.Name);
+        debugText.text += "CREATED room: " + PhotonNetwork.CurrentRoom.Name + "\n";
+    }
+
+    public override void OnCreateRoomFailed(short returnCode, string message)
+    {
+        Debug.Log("Create room FAILED: " + message);
+        debugText.text += "Create room FAILED: " + message + "\n";
+    }
+
+
+    public override void OnJoinedRoom()
+    {
+        Debug.Log("JOINED room: " + PhotonNetwork.CurrentRoom.Name);
+        debugText.text += "JOINED room: " + PhotonNetwork.CurrentRoom.Name + "\n";
+        SwitchScene();
+    }
+
+
+    public override void OnJoinRoomFailed(short returnCode, string message)
+    {
+        Debug.Log("Join room FAILED: " + message);
+        debugText.text += "Join room FAILED: " + message + "\n";
+    }
+
+
+    #endregion
 
 
 }
