@@ -15,7 +15,6 @@ public class CampusManager : MonoBehaviourPunCallbacks
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -23,12 +22,13 @@ public class CampusManager : MonoBehaviourPunCallbacks
         }
     }
 
-
+    [Header("Lists")]
     public TeacherRoot teacherList;
     public StudentRoot studentList;
     [SerializeField]
     List<Room> classRooms = new List<Room>();
 
+    [Header("Identification")]
     public bool isTeacher = false;
     public int teacherNumber = -1;
     public int studentNumber = -1;
@@ -44,7 +44,9 @@ public class CampusManager : MonoBehaviourPunCallbacks
     [SerializeField] GameObject teacherPanel;
     [SerializeField] GameObject studentPanel;
 
+    [Header("Text Fields")]
     [SerializeField] TMP_Text debugText;
+    [SerializeField] TMP_Text studentNoticeText;
 
     private void Start()
     {
@@ -69,6 +71,12 @@ public class CampusManager : MonoBehaviourPunCallbacks
         SceneManager.LoadScene("ClassRoom");
     }
 
+
+    IEnumerator ClearStudentNoticeText()
+    {
+        yield return new WaitForSeconds(3f);
+        studentNoticeText.text = "";
+    }
 
 
 
@@ -170,6 +178,8 @@ public class CampusManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Join room FAILED: " + message);
         debugText.text += "Join room FAILED: " + message + "\n";
+        studentNoticeText.text = "Class has not yet started. Please wait.";
+        StartCoroutine(ClearStudentNoticeText());
     }
 
 

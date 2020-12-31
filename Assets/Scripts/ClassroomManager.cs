@@ -44,7 +44,12 @@ public class ClassroomManager : MonoBehaviour
             string teachSubject = teach.subject;
             string teachClassCode = teach.classCode;
 
-            teacherInstance.GetComponentInChildren<TMP_Text>().text = $"{teachProfessor}\n{teachSubject}\n{teachClassCode}";
+            teacherInstance.GetComponent<PlayerSetup>().SetNameText($"{teachProfessor}\n{teachSubject}\n{teachClassCode}");
+            //teacherInstance.GetComponentInChildren<TMP_Text>().text = $"{teachProfessor}\n{teachSubject}\n{teachClassCode}";
+
+            teacherInstance.GetComponent<PlayerSetup>().SetColor(Color.white);
+
+            roomName = CampusManager.Instance.teacherList.teachers[CampusManager.Instance.teacherNumber].subject;
         }
         else
         {
@@ -57,16 +62,24 @@ public class ClassroomManager : MonoBehaviour
             int studentID = stud.id;
             int studentGrade = stud.gradeAttending;
 
-            studentInstance.GetComponentInChildren<TMP_Text>().text = $"{studentName}\n{studentID}\n{studentGrade}";
+            string nameText = $"{studentName}\n{studentID}\nGrade {studentGrade}";
+            studentInstance.GetComponent<PlayerSetup>().SetNameText(nameText);
+            //studentInstance.GetComponentInChildren<TMP_Text>().text = nameText;
 
-            Renderer[] rends = studentInstance.GetComponentsInChildren<Renderer>();
+
             Color myColor = stud.color;
-            foreach (Renderer r in rends)
-                r.material.color = myColor;
+            studentInstance.GetComponent<PlayerSetup>().SetColor(myColor);
+ 
+
+            PlayerSetup ps = studentInstance.GetComponent<PlayerSetup>();
+            ps.SetNameText(nameText);
+            ps.SetColor(myColor);
+
+            roomName = CampusManager.Instance.teacherList.teachers[CampusManager.Instance.classNumber].subject;
         }
 
         PhotonNetwork.LocalPlayer.NickName = nickname;
-        roomName = CampusManager.Instance.teacherList.teachers[CampusManager.Instance.teacherNumber].subject;
+
     }
 
 }

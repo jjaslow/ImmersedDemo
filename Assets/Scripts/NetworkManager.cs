@@ -49,16 +49,11 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.IsOpen = true;
-        roomOptions.IsVisible = true;
+        roomOptions.IsVisible = false;
         roomOptions.MaxPlayers = 50;
 
+
         PhotonNetwork.CreateRoom(roomName, roomOptions);
-
-        ExitGames.Client.Photon.Hashtable playerSelectionProp =
-    new ExitGames.Client.Photon.Hashtable
-    { {"Teacher", CampusManager.Instance.teacherNumber } };
-
-        PhotonNetwork.LocalPlayer.SetCustomProperties(playerSelectionProp);
     }
 
     public void JoinRoom()
@@ -69,15 +64,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         roomName = CampusManager.Instance.teacherList.teachers[CampusManager.Instance.classNumber].subject;
 
         PhotonNetwork.JoinRoom(roomName);
-
-
-
-        object teacherNumber;
-        if (PhotonNetwork.LocalPlayer.CustomProperties.TryGetValue
-                        ("Teacher", out teacherNumber))
-        {
-            //TODO:: accept teacher room info
-        }
     }
 
 
