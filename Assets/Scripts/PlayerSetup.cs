@@ -50,6 +50,9 @@ public class PlayerSetup : MonoBehaviourPun
 
         //add to master list of people in room
         ClassroomManager.Instance.peopleInClassroom.Add(gameObject);
+
+        //Parent Voice to the players avatar
+        GameObject.Find("VoiceManager").GetComponent<NetworkVoiceManager>().remoteVoiceParent = this.transform;
     }
 
 

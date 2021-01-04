@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2E119C83-7CEC-E76E-7BC2-126778B0F679}</ProjectGuid>
+    <ProjectGuid>{B0E10A67-DA21-C411-3EC9-198C54B868C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PhotonUnityNetworking.Utilities.Culling.Editor</AssemblyName>
+    <AssemblyName>PhotonVoice.API</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -48,7 +48,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.5</UnityProjectGeneratorVersion>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2020.1.17f1</UnityVersion>
   </PropertyGroup>
@@ -56,10 +56,62 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\Editor\CullAreaEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\OpusStatusCode.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\AudioClipWrapper.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\UnityMicrophone.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\VoiceInfo.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\Platform.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\PhotonTransport.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\OpusCtlGetRequest.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\Complexity.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Apple\iOSAudioInReader.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\Bandwidth.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\Util.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\OpusCodec.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\AudioUtil.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\VoiceCodec.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\AudioGen.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\SignalHint.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\Logger.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\OpusDecoder.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\Voice.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Apple\iOSAudioSession.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\ObjectPool.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\OpusCtlSetRequest.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\VoiceClient.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\OpusApplicationType.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\LoadBalancingTransport2.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\Channels.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\ForceChannels.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\AudioSyncBuffer.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\OpusWrapper.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\UnityAudioOut.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\AudioInEnumerator.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\LoadBalancingTransport.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\VoiceSourceAdapter.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\Delay.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\ObjectFactory.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\OpusException.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Windows\WindowsAudioIn.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\VoiceAudio.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Apple\MacOSAudioInReader.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\Common.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\UnityAndroidAudioInAEC.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\RawCodec.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\Enums\SamplingRate.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\MicWrapper.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\WebRTCAudioProcessor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\VoiceFramed.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\MicWrapperPusher.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Apple\MacOSAudioInPusher.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\IOSAudioForceToSpeaker.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Unity\AudioOutCapture.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Platforms\Apple\iOSAudioInPusher.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\Core\POpusCodec\OpusEncoder.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\Editor\PhotonUnityNetworking.Utilities.Culling.Editor.asmdef" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\readme.txt" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceApi\PhotonVoice.API.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -648,17 +700,11 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{7B791E02-DB86-C85D-2854-1B86BBA63184}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{D4DF62FD-3FF7-B24D-9D01-57BABB44D1D3}</Project>
+      <Name>PhotonRealtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

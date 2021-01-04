@@ -23,7 +23,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
 
-    string roomName;
+    public string roomName;
     public bool isTeacher = false;
 
     public TeacherRoot teacherList;

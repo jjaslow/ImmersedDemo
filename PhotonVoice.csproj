@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2E119C83-7CEC-E76E-7BC2-126778B0F679}</ProjectGuid>
+    <ProjectGuid>{3D30C86C-61EA-E0F6-6910-A47E4F334DFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PhotonUnityNetworking.Utilities.Culling.Editor</AssemblyName>
+    <AssemblyName>PhotonVoice</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -48,7 +48,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.5</UnityProjectGeneratorVersion>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2020.1.17f1</UnityVersion>
   </PropertyGroup>
@@ -56,10 +56,42 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\Editor\CullAreaEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\AudioSubTypes.Utils.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Speaker.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\PlaybackDelaySettings.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\AudioSybTypes.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\RemoteVoiceLink.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\ChannelMask.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifierEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifierShort.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\WaveFormatExtensible.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\WaveWriter.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\WaveFormat.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\AudioEncoding.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\Extensions.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\PhotonVoiceLagSimulationGui.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\NativeAndroidMicrophoneSettings.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\TestTone.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IAudioSource.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\VoiceComponent.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IWaveSource.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\SavWav.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\VoiceConnection.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\PhotonVoiceStatsGui.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IWriteable.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifier.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\ConnectAndJoin.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\MicAmplifier\MicAmplifierFloat.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\AudioUtils\CSCore\IReadableAudioSource.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\SaveOutgoingStreamToFile.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\WebRtcAudioDsp.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Recorder.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\UtilityScripts\SaveIncomingStreamToFile.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\ILoggable.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\VoiceLogger.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\Editor\PhotonUnityNetworking.Utilities.Culling.Editor.asmdef" />
+     <None Include="Assets\Photon\PhotonVoice\Code\PhotonVoice.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -648,17 +680,15 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TestRunner">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{7B791E02-DB86-C85D-2854-1B86BBA63184}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{D4DF62FD-3FF7-B24D-9D01-57BABB44D1D3}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.API.csproj">
+      <Project>{B0E10A67-DA21-C411-3EC9-198C54B868C0}</Project>
+      <Name>PhotonVoice.API</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_1_17;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER;UIKIT_OCULUS;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_1_17;UNITY_2020_1;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER;UIKIT_OCULUS;CROSS_PLATFORM_INPUT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -493,6 +493,7 @@
     <Compile Include="Assets\Photon\Simple\Components\ContactSystems\ContactReactorBase.cs" />
     <Compile Include="Assets\UIKits\Demo\ExampleScripts\InvokeKeyboard.cs" />
     <Compile Include="Assets\Photon\Simple\Components\AutoOwnerComponentEnable.cs" />
+    <Compile Include="Assets\Scripts\LowerHand.cs" />
     <Compile Include="Assets\Photon\Simple\Components\ContactSystems\SyncContact.cs" />
     <Compile Include="Assets\Photon\Simple\Core\NetMaster\NetMasterCallbacks.cs" />
     <Compile Include="Assets\Photon\PhotonUtilities\TransformCrusher\TransformCrusherDrawer.cs" />
@@ -509,7 +510,40 @@
     <Compile Include="Assets\Photon\Simple\Components\SyncState\Enums\ObjState.cs" />
     <Compile Include="Assets\Photon\Simple\Utilities\GhostWorld\HauntedStatic.cs" />
     <Compile Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Scripts\ButtonController.cs" />
-    <Compile Include="Assets\Scripts\LowerHand.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\VoiceDemoUI.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\PhotonDemoExtensions.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\SidebarToggle.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\BackgroundMusicController.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\BaseController.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ProximityVoiceTrigger.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\PointersController.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\CharacterInstantiation.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\Highlighter.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\UiExtensions.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\MicrophoneDropdownFiller.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoProximityVoiceChat\Scripts\ChangeName.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\DemoVoiceUI.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\ThirdPersonController.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\MouseLookHelper.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\BetterToggle.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\CodecSettingsUI.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\ChangePOV.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\Scripts\RemoteSpeakerUI.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\OrthographicController.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Scripts\SoundsForJoinAndLeave.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\Scripts\NetworkVoiceManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\XingLightShader.shader" />
@@ -521,24 +555,33 @@
      <None Include="Assets\Photon\PhotonUnityNetworking\changelog.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\CrosshairZCheat.shader" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\WSA\x86\opus_egpv.dll" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_Loader.shader" />
      <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\GradientSkybox.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_SingleComponent.shader" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\x86\AudioIn.dll" />
+     <None Include="Assets\Photon\PhotonVoice\changes-voice.txt" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShader.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\AvatarEyeLens.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\Avatar_PC_SingleComponentExpressive.shader" />
+     <None Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Photon\PhotonUtilities\Compression\plugins\ByteConverter.dll" />
      <None Include="Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\x86_64\webrtc-audio.dll" />
      <None Include="Assets\Photon\PhotonUtilities\PackObject\_GeneratedPackExtensions\PackObject Extensions.txt" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\WSA\ARM\opus_egpv.dll" />
      <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\OculusSampleTrainPropsShader.shader" />
      <None Include="Assets\Photon\Simple\changelog-simple.txt" />
      <None Include="Assets\Oculus\SampleFramework\Usage\DistanceGrab\Materials\ToyCubeWithOutline.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\Locomotion\Materials\ColumnGlow.shader" />
+     <None Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Audio\Pop-J_Fairba-8421_hifi.mp3.txt" />
+     <None Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Fonts\Orbitron Black.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\Avatar_Mobile_CombinedMeshExpressive.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_PC_SingleComponent.shader" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\x86_64\opus_egpv.dll" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\AvatarSurfaceShaderPBSV2.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Version1.5\Avatar_Mobile_CombinedMesh.shader" />
      <None Include="Assets\Photon\PhotonUtilities\Compression\plugins\ByteConverter.xml" />
@@ -559,6 +602,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\Photon\PhotonUtilities\TransformCrusher\plugins\HalFloat.xml" />
      <None Include="Assets\Photon\PhotonLibs\changes-library.txt" />
+     <None Include="Assets\Photon\PhotonVoice\Demos\DemoVoiceUI\RobotoFont\Apache License.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Oculus\Spatializer\Plugins\x86\AudioPluginOculusSpatializer.dll" />
@@ -566,15 +610,18 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
      <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
+     <None Include="Assets\Photon\PhotonVoice\Demos\DemoVoicePun\Audio\Reminder-public_d-291_hifi.mp3.txt" />
      <None Include="Assets\Oculus\SampleFramework\Core\HandsInteraction\Shaders\OculusSampleAlphaHandOutline.shader" />
      <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.dll" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
      <None Include="Assets\Photon\PhotonUtilities\TransformCrusher\plugins\FloatCrusher.xml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\x86\opus_egpv.dll" />
      <None Include="Assets\Oculus\SampleFramework\Usage\HandsTrainExample\Shaders\OculusSampleTrainSmokeShader.shader" />
      <None Include="Assets\Photon\PhotonUtilities\TransformCrusher\plugins\HalFloat.dll" />
      <None Include="Assets\Oculus\SampleFramework\Usage\OVROverlayCanvas\Shaders\UI Prerendered Opaque.shader" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\x86\webrtc-audio.dll" />
      <None Include="Assets\Oculus\SampleFramework\Core\Video\Plugins\Android\Audio360\NOTICE.txt" />
      <None Include="Assets\Oculus\SampleFramework\Usage\Locomotion\Shaders\TriPlanarWorld.shader" />
      <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
@@ -589,12 +636,15 @@
      <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_Transparent.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\x86_64\AudioIn.dll" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Shaders\Hands_02.shader" />
      <None Include="Assets\Oculus\SampleFramework\Core\CustomHands\Materials\Hands_DiffBump.shader" />
      <None Include="Assets\Oculus\Avatar\Resources\Materials\Expressive\Avatar_Mobile_SingleComponentExpressive.shader" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\WSA\x64\opus_egpv.dll" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Oculus\LipSync\Plugins\Win64\OVRLipSync.dll" />
+     <None Include="Assets\Photon\PhotonVoice\PhotonVoiceLibs\WebRTC-LICENSE.txt" />
      <None Include="Assets\Oculus\SampleFramework\license.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -1299,6 +1349,30 @@
     <ProjectReference Include="PhotonUnityNetworking.Editor.csproj">
       <Project>{1E00374B-460B-314A-8858-A6C3C27EF823}</Project>
       <Name>PhotonUnityNetworking.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.API.csproj">
+      <Project>{B0E10A67-DA21-C411-3EC9-198C54B868C0}</Project>
+      <Name>PhotonVoice.API</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.Editor.csproj">
+      <Project>{6F680D22-058A-3CDE-81B0-0BAC63619644}</Project>
+      <Name>PhotonVoice.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.PUN.csproj">
+      <Project>{A91ADCBF-76D1-096A-2CAB-68FD8A2F3FF5}</Project>
+      <Name>PhotonVoice.PUN</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.csproj">
+      <Project>{3D30C86C-61EA-E0F6-6910-A47E4F334DFC}</Project>
+      <Name>PhotonVoice</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.Utilities.Editor.csproj">
+      <Project>{FB589FC6-1F21-719F-81C9-2DB3203D1105}</Project>
+      <Name>PhotonVoice.Utilities.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.PUN.Editor.csproj">
+      <Project>{224B8067-93F5-FDF1-29BF-B2E033C3E1AE}</Project>
+      <Name>PhotonVoice.PUN.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

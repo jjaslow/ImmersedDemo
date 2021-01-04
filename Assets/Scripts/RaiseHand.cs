@@ -11,6 +11,8 @@ public class RaiseHand : MonoBehaviourPun
 
     MySyncronizationScript syncScript;
 
+    bool isHandRaised = false;
+
     public enum RaiseEventCodes
     {
         LowerHand = 0,
@@ -51,8 +53,12 @@ public class RaiseHand : MonoBehaviourPun
     //raise my student's hand locally. will sync automatically.
     public void RaiseStudentsHand()
     {
-        if (!syncScript.isHandRaised)
-            SendRaiseHandMessage();
+        if (isHandRaised)
+            return;
+
+        isHandRaised = true;
+
+        SendRaiseHandMessage();
 
         if (photonView.IsMine)
             syncScript.isHandRaised = true;
@@ -61,7 +67,10 @@ public class RaiseHand : MonoBehaviourPun
     public void LowerStudentHand()
     {
         if (photonView.IsMine)
+        {
+            isHandRaised = false;
             syncScript.isHandRaised = false;
+        }
     }
 
 

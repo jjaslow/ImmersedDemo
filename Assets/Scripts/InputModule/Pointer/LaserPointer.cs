@@ -34,7 +34,7 @@ namespace VRUiKits.Utils
             }
             else
             {
-                lr.SetPosition(1, transform.position + (transform.forward * 5));
+                lr.SetPosition(1, transform.position + (transform.forward * 50));
             }
         }
 

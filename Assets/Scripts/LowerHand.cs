@@ -23,9 +23,11 @@ public class LowerHand : MonoBehaviourPun
     }
 
     //teacher answers the next question with A button press
+    //TODO:: temp switch to button B as button A is read by both players in
+    //my shared testing, so I need to break them apart.
     private void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.One))
+        if (OVRInput.Get(OVRInput.Button.Two))
             AnswerQuestion();
     }
 

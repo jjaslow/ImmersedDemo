@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2E119C83-7CEC-E76E-7BC2-126778B0F679}</ProjectGuid>
+    <ProjectGuid>{6F680D22-058A-3CDE-81B0-0BAC63619644}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>PhotonUnityNetworking.Utilities.Culling.Editor</AssemblyName>
+    <AssemblyName>PhotonVoice.Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -56,10 +56,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\Editor\CullAreaEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Editor\PhotonVoiceEditorUtils.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Editor\SpeakerEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Editor\ExitPlayModeOnScriptCompile.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Editor\WebRtcAudioDspEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Editor\VoiceConnectionEditor.cs" />
+    <Compile Include="Assets\Photon\PhotonVoice\Code\Editor\RecorderEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\Editor\PhotonUnityNetworking.Utilities.Culling.Editor.asmdef" />
+     <None Include="Assets\Photon\PhotonVoice\Code\Editor\PhotonVoice.Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -656,9 +661,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="PhotonUnityNetworking.Utilities.csproj">
-      <Project>{7B791E02-DB86-C85D-2854-1B86BBA63184}</Project>
-      <Name>PhotonUnityNetworking.Utilities</Name>
+    <ProjectReference Include="PhotonRealtime.csproj">
+      <Project>{D4DF62FD-3FF7-B24D-9D01-57BABB44D1D3}</Project>
+      <Name>PhotonRealtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.csproj">
+      <Project>{3D30C86C-61EA-E0F6-6910-A47E4F334DFC}</Project>
+      <Name>PhotonVoice</Name>
+    </ProjectReference>
+    <ProjectReference Include="PhotonVoice.API.csproj">
+      <Project>{B0E10A67-DA21-C411-3EC9-198C54B868C0}</Project>
+      <Name>PhotonVoice.API</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

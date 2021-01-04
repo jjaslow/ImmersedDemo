@@ -399,7 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oculusUserID: 0
   Driver: {fileID: 4765122641970722409}
-  EnableBody: 1
+  EnableBody: 0
   EnableHands: 1
   EnableBase: 0
   EnableExpressive: 1
@@ -414,7 +414,7 @@ MonoBehaviour:
     layerIndex: 0
   ShowFirstPerson: 1
   ShowThirdPerson: 0
-  LevelOfDetail: 5
+  LevelOfDetail: 3
   UseTransparentRenderQueue: 1
   Monochrome_SurfaceShader: {fileID: 4800000, guid: 73f67c4e7bf718b4385aa6b1f8a06591, type: 3}
   Monochrome_SurfaceShader_SelfOccluding: {fileID: 4800000, guid: 69f342b79d37541489919a19cfd8a924, type: 3}
@@ -886,13 +886,13 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 1
   nameTextField: {fileID: 8197858630401079758}
   rend:
   - {fileID: 5183292373044939160}
   - {fileID: 5931326875196958522}
   isHandRaised: 0
   isTeacher: 0
+  m_UseLocal: 1
 --- !u!54 &8770940588695375269
 Rigidbody:
   m_ObjectHideFlags: 0

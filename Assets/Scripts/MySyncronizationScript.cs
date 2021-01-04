@@ -9,6 +9,10 @@ using Photon.Pun;
         private float m_Distance;
         private float m_Angle;
 
+
+    /// <summary>
+    /// Variables to Sync
+    /// </summary>
         private Vector3 m_Direction;
         private Vector3 m_NetworkPosition;
         private Vector3 m_StoredPosition;
@@ -19,8 +23,16 @@ using Photon.Pun;
         public bool m_SynchronizeRotation = true;
         public bool m_SynchronizeScale = false;
 
-    string nameString;
-    string colorString;
+        string nameString;
+        string colorString;
+
+        public TMP_Text nameTextField;
+
+        public Renderer[] rend;
+        public bool isHandRaised;
+        public bool isTeacher;
+    /// //////////////////////////////////
+
 
 
 
@@ -29,11 +41,6 @@ using Photon.Pun;
 
         bool m_firstTake = false;
 
-        public TMP_Text nameTextField;
-
-        public Renderer[] rend;
-    public bool isHandRaised;
-    public bool isTeacher;
 
 
     public void Start()
