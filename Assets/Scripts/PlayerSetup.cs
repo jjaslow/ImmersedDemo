@@ -14,20 +14,24 @@ public class PlayerSetup : MonoBehaviourPun
 
     [SerializeField] GameObject avatar;
     [SerializeField] GameObject canvas;
+    [SerializeField] TMP_Text nameTextCanvas;
+    [SerializeField] Canvas questionsCanvas;
 
     string nameText;
     Color color;
 
-    public bool isVisible = false;
+    bool isTeacher;
+
 
     private void Start()
     {
-        StartCoroutine(MakeVisible());
+        StartCoroutine(InitializePlayerDetails());
 
         DontDestroyOnLoad(gameObject);
 
         PhotonView pv = GetComponent<PhotonView>();
 
+        //enable camera and movement for my player only.
         if(pv.IsMine)
         {
             Debug.Log("Player Setup isMine.");
@@ -37,9 +41,20 @@ public class PlayerSetup : MonoBehaviourPun
             oVRPlayerController.enabled = true;
             oVRSceneSampleController.enabled = true;
             oVRDebugInfo.enabled = true;
+
+            if(isTeacher)
+            {
+                questionsCanvas.worldCamera = Camera.main;
+            }
         }
+
+        //add to master list of people in room
+        ClassroomManager.Instance.peopleInClassroom.Add(gameObject);
     }
 
+
+    //set player variables (name card, avatar color, isTeacher) on local player
+    //will be synced across the network after
     public void SetNameText(string info)
     {
         nameText = info;
@@ -50,18 +65,29 @@ public class PlayerSetup : MonoBehaviourPun
         color = c;
     }
 
-    IEnumerator MakeVisible()
+    public void SetIsTeacher(bool value)
     {
-        yield return new WaitForSeconds(1.5f);
+        isTeacher = value;
+    }
+
+
+    IEnumerator InitializePlayerDetails()
+    {
+        //quick way to avoid avatars showing up before scene changes to classroom
+        //this is an issue only for remote players who need to join the room
+        //before switching scene. We Instantiate upon switching scenes so currently
+        //we need to join first, scene change second, instantiate third.
+        yield return new WaitForSeconds(1);
+
         avatar.SetActive(true);
         canvas.SetActive(true);
 
-        GetComponentInChildren<TMP_Text>().text = nameText;
+        nameTextCanvas.text = nameText;
 
         Renderer[] rends = GetComponentsInChildren<Renderer>();
         foreach (Renderer r in rends)
             r.material.color = color;
 
-        isVisible = true;
+        GetComponent<MySyncronizationScript>().isTeacher = isTeacher;
     }
 }

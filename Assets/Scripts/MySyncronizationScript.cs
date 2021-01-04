@@ -23,6 +23,7 @@ using Photon.Pun;
     string colorString;
 
 
+
         [Tooltip("Indicates if localPosition and localRotation should be used. Scale ignores this setting, and always uses localScale to avoid issues with lossyScale.")]
         public bool m_UseLocal;
 
@@ -31,22 +32,22 @@ using Photon.Pun;
         public TMP_Text nameTextField;
 
         public Renderer[] rend;
+    public bool isHandRaised;
+    public bool isTeacher;
 
-    PlayerSetup playerSetup;
 
-        public void Start()
+    public void Start()
         {
             m_StoredPosition = transform.localPosition;
             m_NetworkPosition = Vector3.zero;
 
             m_NetworkRotation = Quaternion.identity;
 
-        playerSetup = GetComponent<PlayerSetup>();
+        isHandRaised = false;
         }
 
         private void Reset()
         {
-            // Only default to true with new instances. useLocal will remain false for old projects that are updating PUN.
             m_UseLocal = true;
         }
 
@@ -57,9 +58,6 @@ using Photon.Pun;
 
         public void Update()
         {
-        if (!playerSetup.isVisible)
-            return;
-
             var tr = transform;
 
             if (!this.photonView.IsMine)
@@ -131,8 +129,9 @@ using Photon.Pun;
 
                 stream.SendNext(nameTextField.text);
                 stream.SendNext(ColorUtility.ToHtmlStringRGB(rend[0].material.color));
-
-            }
+            stream.SendNext(isHandRaised);
+            stream.SendNext(isTeacher);
+        }
             // Read
             else
             {
@@ -209,10 +208,10 @@ using Photon.Pun;
 
             nameString = (string)stream.ReceiveNext();
             colorString = (string)stream.ReceiveNext();
+            isHandRaised = (bool)stream.ReceiveNext();
+            isTeacher = (bool)stream.ReceiveNext();
 
 
-
-
-            }
+        }
         }
     }

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
 using System.Collections;
+
 
 public class CampusManager : MonoBehaviourPunCallbacks
 {
@@ -23,16 +23,16 @@ public class CampusManager : MonoBehaviourPunCallbacks
     }
 
     [Header("Lists")]
-    public TeacherRoot teacherList;
-    public StudentRoot studentList;
+    TeacherRoot teacherList;
+    StudentRoot studentList;
     [SerializeField]
     List<Room> classRooms = new List<Room>();
 
+
     [Header("Identification")]
-    public bool isTeacher = false;
-    public int teacherNumber = -1;
-    public int studentNumber = -1;
-    public int classNumber = -1;
+    int teacherNumber = -1;
+    int studentNumber = -1;
+    int classNumber = -1;
 
     [Header("Dropdowns")]
     [SerializeField] TMP_Dropdown teacherDropdown;
@@ -46,7 +46,7 @@ public class CampusManager : MonoBehaviourPunCallbacks
 
     [Header("Text Fields")]
     [SerializeField] TMP_Text debugText;
-    [SerializeField] TMP_Text studentNoticeText;
+    [SerializeField] public TMP_Text studentNoticeText;
 
     private void Start()
     {
@@ -54,6 +54,10 @@ public class CampusManager : MonoBehaviourPunCallbacks
         teacherPanel.SetActive(false);
         studentPanel.SetActive(false);
 
+        //download JSON from API here
+        StartCoroutine(DownloadJSON.DownloadJSONFiles());
+
+        //process hardcoded JSON files and create lists of teachers and students
         TextAsset jsonTeacher = Resources.Load<TextAsset>("teachers");     
         teacherList = JsonUtility.FromJson<TeacherRoot>(jsonTeacher.text);
 
@@ -61,18 +65,20 @@ public class CampusManager : MonoBehaviourPunCallbacks
         studentList = JsonUtility.FromJson<StudentRoot>(jsonStudent.text);
         foreach (var s in studentList.students)
         {
-            s.Initialize();
+            s.Initialize(); //set the student avatar color (from Hex value)
         }
     }
 
 
-    void SwitchScene()
+
+
+    public void SwitchScene()
     {
         SceneManager.LoadScene("ClassRoom");
     }
 
 
-    IEnumerator ClearStudentNoticeText()
+    public IEnumerator ClearStudentNoticeText()
     {
         yield return new WaitForSeconds(3f);
         studentNoticeText.text = "";
@@ -87,10 +93,11 @@ public class CampusManager : MonoBehaviourPunCallbacks
         teacherPanel.SetActive(true);
         studentPanel.SetActive(false);
 
+        //load teachers into dropdown
         List<string> options = new List<string>();
         foreach (var teacher in teacherList.teachers)
         {
-            options.Add(teacher.classCode); // Or whatever you want for a label
+            options.Add(teacher.classCode);
         }
         teacherDropdown.ClearOptions();
         teacherDropdown.AddOptions(options);
@@ -98,15 +105,13 @@ public class CampusManager : MonoBehaviourPunCallbacks
 
     public void TeacherGotoClass()
     {
-        isTeacher = true;
-
         teacherNumber = teacherDropdown.value;
         Debug.Log(teacherList.teachers[teacherNumber].professor);
         debugText.text += teacherList.teachers[teacherNumber].professor + "\n";
 
-        new Room(teacherList.teachers[teacherNumber]);
+        //new Room(teacherList.teachers[teacherNumber]);
 
-        NetworkManager.Instance.CreateRoom();
+        NetworkManager.Instance.CreateRoom(teacherList, teacherNumber);
     }
 
 
@@ -117,19 +122,20 @@ public class CampusManager : MonoBehaviourPunCallbacks
         teacherPanel.SetActive(false);
         studentPanel.SetActive(true);
 
+        //load students into dropdown
         List<string> options = new List<string>();
         foreach (Student student in studentList.students)
         {
-            options.Add(student.name); // Or whatever you want for a label
+            options.Add(student.name);
         }
         studentDropdown.ClearOptions();
         studentDropdown.AddOptions(options);
 
-
+        //load teachers into dropdown
         List<string> options2 = new List<string>();
         foreach (var teacher in teacherList.teachers)
         {
-            options2.Add(teacher.classCode); // Or whatever you want for a label
+            options2.Add(teacher.classCode);
         }
         studentClassesDropdown.ClearOptions();
         studentClassesDropdown.AddOptions(options2);
@@ -140,50 +146,13 @@ public class CampusManager : MonoBehaviourPunCallbacks
         studentNumber = studentDropdown.value;
         classNumber = studentClassesDropdown.value;
 
-        NetworkManager.Instance.JoinRoom();
+        NetworkManager.Instance.JoinRoom(teacherList, studentList, studentNumber, classNumber);
     }
 
 
     #endregion
 
 
-
-
-
-    #region PUN Callbacks
-
-
-    public override void OnCreatedRoom()
-    {
-        Debug.Log("CREATED room: " + PhotonNetwork.CurrentRoom.Name);
-        debugText.text += "CREATED room: " + PhotonNetwork.CurrentRoom.Name + "\n";
-    }
-
-    public override void OnCreateRoomFailed(short returnCode, string message)
-    {
-        Debug.Log("Create room FAILED: " + message);
-        debugText.text += "Create room FAILED: " + message + "\n";
-    }
-
-
-    public override void OnJoinedRoom()
-    {
-        Debug.Log("JOINED room: " + PhotonNetwork.CurrentRoom.Name);
-        debugText.text += "JOINED room: " + PhotonNetwork.CurrentRoom.Name + "\n";
-        SwitchScene();
-    }
-
-
-    public override void OnJoinRoomFailed(short returnCode, string message)
-    {
-        Debug.Log("Join room FAILED: " + message);
-        debugText.text += "Join room FAILED: " + message + "\n";
-        studentNoticeText.text = "Class has not yet started. Please wait.";
-        StartCoroutine(ClearStudentNoticeText());
-    }
-
-
-    #endregion
 
 
 }
